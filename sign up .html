@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>sign up</title>
+  </head>
+
+  <body>
+    <ul>
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="sign up .html">sign up</a></li>
+      <li id="ter"><input id="colors" onchange="changeBg()" type="color" /></li>
+      <il><img id="sora" src="https://www.pngfind.com/pngs/m/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.png" width="10%"></li>
+    </ul>
+    <div id="id1">
+      <h1>sign up</h1>
+    </div>
+    <div id="sign">
+      <form>
+        <label> first name </label>
+        <input type="text" />
+        <br />
+        <label>password</label>
+        <input type="password" />
+        <br />
+        <label>email</label>
+        <input type="email" />
+        <br />
+        <br />
+        <label> gender </label>
+        <br />
+        <label>boy</label>
+        <input type="radio" />
+        <label>girl</label>
+        <input type="radio" />
+        <input id="pro" type="file" onchange="cahngeprofile()">
+      </form>
+    </div>
+    <script>
+        function changeBg() {
+            var newcolor = document.getElementById("colors").value;
+            document.body.style.background = newcolor;
+        }
+        
+        function cahngeprofile(){
+            var newprofile=document.getElementById("pro").files[0].name;
+            document.getElementById("sora").src=newprofile;
+        }
+        </script>
+        </body>
+</html>
